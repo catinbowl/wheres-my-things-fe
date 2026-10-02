@@ -10,8 +10,12 @@
     "ios": {
       "icon": "./assets/expo.icon",
       "supportsTablet": false,
-      "bundleIdentifier": "com.catinbowl.wheresmythings",
-      "appleTeamId": "739N43RHDG"
+      "bundleIdentifier": "id.my.catinbowl.wheresmythings",
+      "deploymentTarget": "17.0",
+      "appleTeamId": "R78BLG8966",
+      "infoPlist": {
+        "CFBundleDisplayName": "Where's\u2007My\u2007Things"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +25,7 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "com.catinbowl.wheresmythings",
+      "package": "id.my.catinbowl.wheresmythings",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.RECORD_AUDIO",
@@ -106,7 +110,20 @@
         }
       ],
       "expo-font",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableMinifyInReleaseBuilds": true
+          },
+          "ios": {
+            "deploymentTarget": "17.0",
+            "bundleIdentifier": "id.my.catinbowl.wheresmythings",
+            "enableSceneSupport": true
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
